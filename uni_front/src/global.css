@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-jacques-francois: "Jacques Francois";
+
+  /* font sizes */
+  --font-size-13xl: 32px;
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-lightcoral: #e37576;
+  --color-indianred: #b94e50;
+  --color-black: #000;
+
+  /* Border radiuses */
+  --br-21xl: 40px;
+}
