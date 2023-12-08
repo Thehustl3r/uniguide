@@ -1,17 +1,17 @@
-import React, { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 import StartButton from "../components/StartButton";
+import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+  const onHOMETextClick = useCallback(() => {
+    navigate("/home-page");
+  }, [navigate]);
+
   const onABOUTUSTextClick = useCallback(() => {
     // Please sync "About Us" to the project
   }, []);
-  const navigate = useNavigate();
-
-  const onHomeClick = useCallback(() => {
-    navigate('/home-Page');
-  }, [navigate]);
 
   return (
     <div className="landing-page">
@@ -30,10 +30,7 @@ const LandingPage = () => {
         tailored just for you.
       </div>
       <div className="home-parent">
-        <div
-	  className="home"
-	  onClick={onHomeClick}
-	>HOME</div>
+        <div className="home" onClick={onHOMETextClick}>HOME</div>
         <div
           className="about-us"
           onClick={onABOUTUSTextClick}
@@ -56,10 +53,12 @@ const LandingPage = () => {
         <StartButton />
       </div>
       <div className="start">START</div>
-      <div className="ezgif-1-parent">
-        <img className="ezgif-1-icon" alt="" src="/ezgif-1@2x.png" />
-        <img className="fot03-1-icon" alt="" src="/fot03-1@2x.png" />
-        <img className="foto8-1-icon" alt="" src="/foto8-1@2x.png" />
+      <div className="footer">
+        <div className="ezgif-1-parent">
+          <img className="ezgif-1-icon" alt="" src="/ezgif-1@2x.png" />
+          <img className="fot03-1-icon" alt="" src="/fot03-1@2x.png" />
+          <img className="foto8-1-icon" alt="" src="/foto8-1@2x.png" />
+        </div>
       </div>
     </div>
   );

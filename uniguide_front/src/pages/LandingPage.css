@@ -152,6 +152,15 @@
   width: 60px;
   height: 55px;
 }
+.footer {
+  position: absolute;
+  top: 953px;
+  left: 0;
+  background-color: var(--color-slategray);
+  width: 1440px;
+  height: 71px;
+  overflow: hidden;
+}
 .ezgif-1-parent {
   position: absolute;
   top: 956px;
