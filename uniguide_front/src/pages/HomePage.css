@@ -30,7 +30,7 @@
 .section5 {
   top: 2733px;
   left: 0;
-  background-color: var(--color-slategray);
+  background-color: #778291;
   width: 1440px;
   height: 69px;
   overflow: hidden;
@@ -54,8 +54,8 @@
 .personalized-recommendations {
   top: 0;
   left: 0;
-  font-size: var(--font-size-17xl);
-  color: var(--color-gray-200);
+  font-size: 36px;
+  color: #020101;
   width: 462px;
   height: 79px;
 }
@@ -70,8 +70,8 @@
 .group-wrapper {
   top: 0;
   left: 0;
-  border-radius: var(--br-11xl);
-  background-color: var(--color-gainsboro);
+  border-radius: 30px;
+  background-color: #d9d9d9;
   width: 400px;
   height: 480px;
   overflow: hidden;
@@ -95,7 +95,7 @@
 .student-reviews {
   top: 0;
   left: 17px;
-  font-size: var(--font-size-17xl);
+  font-size: 36px;
   width: 297px;
   height: 70px;
 }
@@ -110,8 +110,8 @@
 .frame7 {
   top: 0;
   left: 912px;
-  border-radius: var(--br-11xl);
-  background-color: var(--color-gainsboro);
+  border-radius: 30px;
+  background-color: #d9d9d9;
   width: 400px;
   height: 480px;
   overflow: hidden;
@@ -127,7 +127,7 @@
   position: absolute;
   top: 0;
   left: 12px;
-  font-size: var(--font-size-17xl);
+  font-size: 36px;
   display: inline-block;
   width: 422px;
 }
@@ -150,8 +150,8 @@
 .group-container {
   top: 0;
   left: 456px;
-  border-radius: var(--br-11xl);
-  background-color: var(--color-gainsboro);
+  border-radius: 30px;
+  background-color: #d9d9d9;
   width: 400px;
   height: 480px;
   overflow: hidden;
@@ -167,11 +167,11 @@
 .section4 {
   top: 2171px;
   left: 0;
-  background-color: var(--color-slategray);
+  background-color: #778291;
   width: 1440px;
   height: 562px;
   overflow: hidden;
-  font-family: var(--font-inter);
+  font-family: Inter;
 }
 .graduate-icon {
   position: absolute;
@@ -193,7 +193,7 @@
 .embark-on-a {
   top: 272px;
   left: 0;
-  font-size: var(--font-size-13xl);
+  font-size: 32px;
   text-align: left;
   width: 681px;
   height: 343px;
@@ -209,11 +209,11 @@
 .section3 {
   top: 1486px;
   left: 0;
-  background-color: var(--color-slategray);
+  background-color: #778291;
   width: 1440px;
   overflow: hidden;
   text-align: center;
-  font-size: var(--font-size-45xl);
+  font-size: 64px;
 }
 .we-elevate-your {
   position: absolute;
@@ -228,7 +228,7 @@
 }
 .blank-line {
   margin: 0;
-  color: var(--color-black);
+  color: #000;
 }
 .uncover-the-story-container {
   position: absolute;
@@ -249,11 +249,11 @@
 .section2 {
   top: 948px;
   left: 0;
-  background-color: var(--color-slategray);
+  background-color: #778291;
   width: 1440px;
   height: 538px;
   overflow: hidden;
-  color: var(--color-gray-200);
+  color: #020101;
 }
 .group-child {
   position: absolute;
@@ -270,7 +270,7 @@
   width: 674.6px;
 }
 .explore-a-world {
-  font-size: var(--font-size-13xl);
+  font-size: 32px;
   width: 673.6px;
   height: 195px;
   flex-shrink: 0;
@@ -296,14 +296,14 @@
 .section1 {
   top: 165px;
   left: 0;
-  background-color: var(--color-slategray);
+  background-color: #778291;
   width: 1440px;
   height: 783px;
   overflow: hidden;
   text-align: left;
-  font-size: var(--font-size-45xl);
-  color: var(--color-black);
-  font-family: var(--font-jacques-francois);
+  font-size: 64px;
+  color: #000;
+  font-family: #000;
 }
 .black-white-minimalist-logo-2-icon1 {
   position: absolute;
@@ -371,8 +371,8 @@
 .group-item {
   top: 0;
   left: 0;
-  border-radius: var(--br-xl);
-  background-color: var(--color-lightcoral);
+  border-radius: 20px;
+  background-color: #e37576;
   width: 193px;
   height: 41px;
 }
@@ -380,10 +380,10 @@
   position: absolute;
   top: 8px;
   left: 41px;
-  font-size: var(--font-size-xl);
+  font-size: 20px;
   font-weight: 800;
-  font-family: var(--font-inter);
-  color: var(--color-white);
+  font-family: Inter;
+  color: #fff;
   text-align: left;
 }
 .searc1-removebg-preview-1-icon1 {
@@ -412,10 +412,10 @@
 }
 .home-page,
 .home-page-inner {
-  background-color: var(--color-white);
+  background-color: #fff;
   overflow: hidden;
   text-align: left;
-  color: var(--color-black);
+  color: #000;
 }
 .home-page-inner {
   position: absolute;
@@ -428,17 +428,17 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  font-size: var(--font-size-xl);
-  font-family: var(--font-inter);
+  font-size: 20px;
+  font-family: Inter;
 }
 .home-page {
   position: relative;
   width: 100%;
   height: 2802px;
-  font-size: var(--font-size-13xl);
-  font-family: var(--font-jacques-francois);
+  font-size: 32px;
+  font-family: Serif;
 }
-@media screen and (max-width: 1200px) {
+/*@media screen and (max-width: 1200px) {
   .group-child {
     max-width: 50%;
     height: auto;
@@ -448,8 +448,8 @@
   }
   .home-page-inner {
     flex-direction: column;
-    padding-left: var(--padding-xl);
-    padding-right: var(--padding-xl);
+    padding-left: 20px;
+    padding-right: 20px;
     box-sizing: border-box;
   }
-}
+}*/

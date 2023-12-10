@@ -18,8 +18,8 @@
   position: absolute;
   top: 260px;
   left: 95px;
-  font-size: var(--font-size-45xl);
-  font-family: var(--font-jacques-francois);
+  font-size: 64px;
+  font-family: Serif;
   display: inline-block;
   width: 811px;
   height: 189px;
@@ -32,8 +32,8 @@
   position: absolute;
   top: 482px;
   left: 138px;
-  font-size: var(--font-size-13xl);
-  font-family: var(--font-jacques-francois);
+  font-size: 32px;
+  font-family: Serif;
   width: 733px;
   height: 175px;
 }
@@ -91,8 +91,8 @@
   position: absolute;
   top: 75px;
   left: 927px;
-  border-radius: var(--br-xl);
-  background-color: var(--color-lightcoral);
+  border-radius: 20px;
+  background-color: #e37576;
   width: 193px;
   height: 41px;
 }
@@ -101,7 +101,7 @@
   top: 83px;
   left: 968px;
   font-weight: 800;
-  color: var(--color-white);
+  color: #fff;
 }
 .searc1-removebg-preview-1-icon {
   position: absolute;
@@ -125,9 +125,9 @@
   position: absolute;
   top: 765px;
   left: 397px;
-  font-size: var(--font-size-13xl);
+  font-size: 32px;
   font-weight: 800;
-  color: var(--color-white);
+  color: #fff;
   display: inline-block;
   width: 142px;
 }
@@ -153,13 +153,13 @@
   height: 55px;
 }
 .footer {
-  position: absolute;
+  /*position: absolute;
   top: 953px;
   left: 0;
-  background-color: var(--color-slategray);
-  width: 1440px;
-  height: 71px;
-  overflow: hidden;
+  /*ackground-color: var(--color-slategray);*/
+  /*width: 1440px;
+  height: 71px;;
+  /*overflow: hidden;*/
 }
 .ezgif-1-parent {
   position: absolute;
@@ -169,13 +169,44 @@
   height: 55px;
 }
 .landing-page {
-  position: relative;
-  background-color: var(--color-white);
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
   width: 100%;
   height: 1024px;
   overflow: hidden;
   text-align: left;
-  font-size: var(--font-size-xl);
-  color: var(--color-black);
-  font-family: var(--font-inter);
+  font-size: 20px;
+  color: #000;
+  font-family: Inter;
+}
+@media (max-width: 768px) {
+  .start-discovering-your {
+    font-size: var(--font-size-3xl);
+    /* Adjust other styles as needed */
+  }
+
+  .this-is-not {
+    font-size: var(--font-size-md);
+    /* Adjust other styles as needed */
+  }
+
+  /* Adjust other styles for smaller screens */
+}
+
+/* Mobile (480px) and smaller */
+@media (max-width: 480px) {
+  .landing-page {
+    font-size: var(--font-size-sm);
+    /* Adjust other styles as needed */
+  }
+
+  .start-discovering-your {
+    font-size: var(--font-size-lg);
+    /* Adjust other styles as needed */
+  }
+
+  /* Adjust other styles for even smaller screens */
 }
