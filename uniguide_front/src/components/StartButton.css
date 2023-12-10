@@ -2,12 +2,12 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: var(--color-lightcoral);
+  background-color: #e37576;
   position: relative;
-  border-radius: var(--br-21xl);
+  border-radius: 40px;
   width: 400px;
   height: 100px;
 }
 .frame-child:hover {
-  background-color: var(--color-indianred);
+  background-color: #b74d4f;
 }
