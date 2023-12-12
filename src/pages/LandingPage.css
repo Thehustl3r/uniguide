@@ -169,32 +169,15 @@
   height: 55px;
 }
 .landing-page {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
+ /* position: relative;*/
   background-color: #fff;
-  width: 100%;
+  /*width: 100%;
   max-width: 1024px;
   height: 1024px;
   overflow: hidden;
   text-align: left;
   font-size: 20px;
-  color: #000;
+  color: #000;*/
   font-family: Inter;
-}
-@media screen and (min-width: 768px) {
-  /*.landing-page {
-    font-size: 24px;
-    height: auto;
-    padding: 20px;
-  }*/
-
-}
-
-@media screen and (max-width: 600px) {
-  /*.landing-page {
-    font-size: 10px;
-    height: auto;
-    padding: 10px;
-  }*/
+  margin: auto;
 }
