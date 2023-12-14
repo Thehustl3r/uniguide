@@ -1,0 +1,128 @@
+.logo-icon2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 239px;
+  height: 161px;
+  object-fit: cover;
+}
+.about-us2,
+.contact-us2,
+.home1,
+.services2 {
+  position: absolute;
+  top: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+.home1 {
+  left: 0;
+  display: inline-block;
+  width: 66px;
+}
+.about-us2,
+.contact-us2,
+.services2 {
+  left: 101px;
+}
+.contact-us2,
+.services2 {
+  left: 248px;
+}
+.contact-us2 {
+  left: 376px;
+  display: inline-block;
+  width: 132px;
+  height: 23px;
+}
+.home-group {
+  position: absolute;
+  top: 83px;
+  left: 286px;
+  width: 508px;
+  height: 24px;
+}
+.login3,
+.sign-up2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sign-up2 {
+  left: 82px;
+}
+.group-child2,
+.login-group {
+  position: absolute;
+  top: 83px;
+  left: 1167px;
+  width: 163px;
+  height: 24px;
+}
+.group-child2 {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-lightcoral);
+  width: 193px;
+  height: 41px;
+}
+.search1 {
+  position: absolute;
+  top: 8px;
+  left: 41px;
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+}
+.searc1-removebg-preview-1-icon1 {
+  position: absolute;
+  top: 8px;
+  left: 141px;
+  width: 30px;
+  height: 24px;
+  object-fit: cover;
+}
+.group-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 75px;
+  left: 927px;
+  width: 193px;
+  height: 41px;
+}
+.logo-group {
+  position: relative;
+  width: 1330px;
+  height: 161px;
+}
+.header1 {
+  background-color: var(--color-white);
+  width: 1440px;
+  height: 167px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1200px) {
+  .header1 {
+    flex-direction: column;
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

@@ -1,13 +1,15 @@
-.frame-child {
+.rectangle-button {
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: #e37576;
-  position: relative;
-  border-radius: 40px;
-  width: 400px;
-  height: 100px;
+  background-color: var(--color-lightcoral);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-21xl);
+  width: 194px;
+  height: 72px;
 }
-.frame-child:hover {
-  background-color: #b94e50;
+.rectangle-button:hover {
+  background-color: var(--color-indianred);
 }

@@ -1,10 +1,13 @@
 import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import "./StartExploring.css";
 
 const StartExploring = ({ startExploring }) => {
+  const navigate = useNavigate();
+
   const onStartExploringTextClick = useCallback(() => {
-    // Please sync "About Us" to the project
-  }, []);
+    navigate("/about-us");
+  }, [navigate]);
 
   return (
     <button className="start-exploring-wrapper">

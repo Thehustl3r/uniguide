@@ -1,0 +1,86 @@
+.first-name1,
+.middle-name1 {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-weight: 500;
+}
+.middle-name1 {
+  top: 120px;
+  left: 9px;
+}
+.last-name1 {
+  position: absolute;
+  top: 218px;
+  left: 16px;
+}
+.email5,
+.last-name1 {
+  font-weight: 500;
+}
+.email4 {
+  position: absolute;
+  top: 319px;
+  left: 26px;
+}
+.confirm-password,
+.password1 {
+  position: absolute;
+  top: 438px;
+  left: 16px;
+  font-weight: 500;
+}
+.confirm-password {
+  top: 539px;
+  left: 0;
+}
+.group-child19 {
+  position: absolute;
+  top: 0;
+  left: 322px;
+  background-color: var(--color-black);
+  width: 505px;
+  height: 73px;
+}
+.group-child20,
+.group-child21,
+.group-child22,
+.group-child23,
+.group-child24 {
+  position: absolute;
+  top: 106px;
+  left: 326px;
+  background: linear-gradient(#000, #000), #d9d9d9;
+  width: 505px;
+  height: 73px;
+}
+.group-child21,
+.group-child22,
+.group-child23,
+.group-child24 {
+  top: 212px;
+}
+.group-child22,
+.group-child23,
+.group-child24 {
+  top: 318px;
+}
+.group-child23,
+.group-child24 {
+  top: 424px;
+  left: 333px;
+}
+.group-child24 {
+  top: 539px;
+}
+.first-name-group {
+  position: absolute;
+  top: 165px;
+  left: 299px;
+  width: 838px;
+  height: 612px;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

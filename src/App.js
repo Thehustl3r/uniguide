@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 function App() {
   const action = useNavigationType();
@@ -25,17 +27,21 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "Default Title";
-        metaDescription = "Default Meta Description";
+        title = "";
+        metaDescription = "";
         break;
       case "/home-page":
-        title = "Home Page Title";
-        metaDescription = "Home Page Meta Description";
+        title = "";
+        metaDescription = "";
         break;
-      default:
-        title = "Default Title";
-        metaDescription = "Default Meta Description";
-	break;
+      case "/login":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/sign-up":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -56,6 +62,8 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/home-page" element={<HomePage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/sign-up" element={<SignUp />} />
     </Routes>
   );
 }
