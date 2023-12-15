@@ -14,7 +14,7 @@
 }
 .explore-a-world {
   position: relative;
-  font-size: var(--font-size-13xl);
+  font-size: 32px;
   display: inline-block;
   width: 673.6px;
   height: 195px;
@@ -28,7 +28,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: var(--gap-33xl);
+  gap: 52px;
 }
 .frame-parent2,
 .section1 {
@@ -41,21 +41,12 @@
 .section1 {
   top: 167px;
   left: 0;
-  background-color: var(--color-slategray);
+  background-color: #778291;
   width: 1440px;
   height: 783px;
   overflow: hidden;
   text-align: left;
-  font-size: var(--font-size-45xl);
-  color: var(--color-black);
-  font-family: var(--font-jacques-francois);
-}
-@media screen and (max-width: 1200px) {
-  .frame-icon {
-    max-width: 50%;
-    height: auto;
-  }
-  .section1 {
-    height: auto;
-  }
+  font-size: 64px;
+  color: #000;
+  font-family: Jacques Francois;
 }

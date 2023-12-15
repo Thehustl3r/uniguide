@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
-import Login from "./pages/Login";
+import LogIn from './pages/LogIn';
 import SignUp from "./pages/SignUp";
 
 function App() {
@@ -42,6 +42,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      default:
+        title = "Page Not Found";
+        metaDescription = "Sorry, the page you requested does not exist.";
+        break;
     }
 
     if (title) {
@@ -62,7 +66,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/home-page" element={<HomePage />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<LogIn/>} />
       <Route path="/sign-up" element={<SignUp />} />
     </Routes>
   );

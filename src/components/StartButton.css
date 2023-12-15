@@ -2,14 +2,14 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: var(--color-lightcoral);
+  background-color: #e37576;
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: var(--br-21xl);
+  border-radius: 40px;
   width: 194px;
   height: 72px;
 }
 .rectangle-button:hover {
-  background-color: var(--color-indianred);
+  background-color: #b94e50;
 }
