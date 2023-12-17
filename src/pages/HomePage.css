@@ -24,62 +24,126 @@
   align-items: center;
 }
 
-.paragraphs {
-  flex: 2;
-  padding: 10px;
-  border: 1px solid #ccc;
+.section2 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 20px;
+  padding: 20px;
 }
+
+/*.paragraph-1,
+.paragraph-2 {
+  flex: 1;
+  padding: 10px;
+}*/
 
 .image-student {
   margin-top: 20px;
 }
 
-.apply-now-btn {
-  background-color: #E37576;
-  color: #fff;
-  cursor: pointer;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 20px;
-  flex-shrink: 0;
+.s-element {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 20px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
+.paragraphs {
+  flex: 1;
+  padding: 10px;
+  width: 100%;
+}
+
+.apply-now-btn,
 .start-exploring-btn {
   background-color: #E37576;
   color: #fff;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 10px 20px;
   border: none;
   border-radius: 20px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-top: 20px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
 }
 
-.section2 {
+.services {
+  text-align: center;
+  padding: 20px;
+  background-color: #778291;
+  width: 100%;
+  padding: 10px;
+}
+
+h3 {
+  color: #333;
+}
+
+.service-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  /*display: inline-flex;
+  align-items: flex-start;*/
+  gap: 50px;
+  width: 100%;
 }
 
-.section3 {
+.service {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid #000;
+  width: 240px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  /*box-shadow: 0 0 10px rgba(161, 47, 47, 0.1);
+  transition: transform 0.3s ease-in-out;*/
+
+}
+
+.service:hover {
+  transform: scale(1.05);
+}
+
+.service img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 30px 30px 0px 0px;
+}
+
+.service p {
+  margin-top: 10px;
+}
+
+.main-box {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: flex-start;
+  border: 2px solid #333;
+  padding: 20px;
+  margin: 20px;
+  background-color: #778291;
+}
+
+.inner-box {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.extended-box {
+  width: 50px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  /* Extend outside the main box */
+  position: relative;
+  left: -30px;
+  background-color: #e6e6e6;
 }

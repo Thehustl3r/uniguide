@@ -16,7 +16,7 @@ const Footer = () => {
                         <p>+250725317338</p>
                     </div>
                 </div>
-                <div className='footer-item2'>
+                <div className='footer-item1'>
                     <div className='f-image'>
                         <img src='./email.png' alt=''/>
                     </div>
@@ -44,7 +44,7 @@ const Footer = () => {
                         <p>uniguide</p>
                     </div>
                 </div>
-                <div className='footer-item2'>
+                <div className='footer-item1'>
                     <div className='f-image'>
                         <img src='./linkd-removebg-preview.png' alt=''/>
                     </div>
@@ -52,7 +52,7 @@ const Footer = () => {
                         <p>@uniguide</p>
                     </div>
                 </div>
-                <div className='footer-item2'>
+                <div className='footer-item1'>
                     <div className='f-image'>
                         <img src='./insta-removebg-preview.png' alt=''/>
                     </div>

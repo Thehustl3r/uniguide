@@ -4,9 +4,8 @@
     justify-content: space-between;
     align-items: center;
     height: 167px;
-    /*(width: 100%;
-    max-width: 1200px;*/
-    width: 100vw;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
   }
   
@@ -14,11 +13,6 @@
     max-width: 100%;
     width: 239px;
     height: 167px;
-  }
-  
-  .nav-section,
-  .btn-section {
-    margin-left: 20px;
   }
   
   .nav-list {
