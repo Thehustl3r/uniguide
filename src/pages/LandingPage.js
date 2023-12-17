@@ -1,74 +1,26 @@
-import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
-import StartButton from "../components/StartButton";
-import Footer from "../components/Footer";
-import "./LandingPage.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './LandingPage.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Button from '../components/Button';
 
 const LandingPage = () => {
-  const navigate = useNavigate();
-
-  const onHOMETextClick = useCallback(() => {
-    navigate("/home-page");
-  }, [navigate]);
-
-  const onABOUTUSTextClick = useCallback(() => {
-    navigate("/about-us");
-  }, [navigate]);
-
-  const onSERVICESTextClick = useCallback(() => {
-    navigate("/services");
-  }, [navigate]);
-
-  const onCONTACTUSTextClick = useCallback(() => {
-    navigate("/contact-us");
-  }, [navigate]);
-
-  const onLOGINTextClick = useCallback(() => {
-    navigate("/login");
-  }, [navigate]);
-
-  const onSIGNUPTextClick = useCallback(() => {
-    navigate("/sign-up");
-  }, [navigate]);
-
   return (
     <div className="landing-page">
-      <Header
-        headerFlexShrink="0"
-        headerPosition="unset"
-        headerTop="unset"
-        headerLeft="unset"
-        onHOMETextClick={onHOMETextClick}
-        onABOUTUSTextClick={onABOUTUSTextClick}
-        onSERVICESTextClick={onSERVICESTextClick}
-        onCONTACTUSTextClick={onCONTACTUSTextClick}
-        onLOGINTextClick={onLOGINTextClick}
-        onSIGNUPTextClick={onSIGNUPTextClick}
-      />
-      <div className="handsimage-parent">
-        <img className="handsimage-icon" alt="" src="/handsimage@2x.png" />
-        <div className="start-discovering-your">
-          Start Discovering Your Academic Adventure Now
+      <Header />
+      <div className="section">
+        <div className='title'>
+            <p>Start Discovering Your Academic Adventure Now</p>
         </div>
-        <div className="this-is-not">
-          This is not just a search; it's an invitation to discover and shape
-          your unique academic story. Join us on this thrilling academic
-          adventure, tailored just for you.
+        <div className='content'>
+            <p>This is not just a search; it's an invitation to discover and shape your unique academic story. Join us on this thrilling academic adventure, tailored just for you.</p>
         </div>
-        <button className="group-wrapper">
-          <div className="rectangle-parent">
-            <StartButton />
-            <div className="start">START</div>
-          </div>
-        </button>
+        <Link to="home-page">
+            <Button label="START" className='start-btn'/>
+        </Link>
       </div>
-      <Footer
-        footerPosition="relative"
-        footerFlexShrink="0"
-        footerTop="unset"
-        footerLeft="unset"
-      />
+      <Footer />
     </div>
   );
 };

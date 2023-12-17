@@ -38,7 +38,7 @@ export default function LOgIn() {
             width:'600px',
           }}
         >
-          <img src="/black-white-minimalist-logo--2-removebgpreview-11@2x.png" alt="" style={{ width: '200px', height: '200px' }}/>
+          <img src="/ulogo.png" alt="" style={{ width: '200px', height: '200px' }}/>
           <Typography component="h1" variant="h5">
             Log in
           </Typography>
@@ -86,7 +86,7 @@ export default function LOgIn() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link to="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

@@ -68,7 +68,7 @@ export default function SignUp() {
             width:'600px',
           }}
         >
-          <img src="/black-white-minimalist-logo--2-removebgpreview-11@2x.png" alt="" style={{ width: '200px', height: '200px' }}/>
+          <img src="/ulogo.png" alt="" style={{ width: '200px', height: '200px' }}/>
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>

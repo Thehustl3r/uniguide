@@ -1,79 +1,52 @@
-.handsimage-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1440px;
-  height: 788px;
-  object-fit: cover;
-}
-.start-discovering-your {
-  position: absolute;
-  top: 95px;
-  left: 95px;
-  display: inline-block;
-  width: 811px;
-  height: 189px;
-}
-.start,
-.this-is-not {
-  position: absolute;
-  font-size: 32px;
-  display: inline-block;
-}
-.this-is-not {
-  top: 317px;
-  left: 138px;
-  width: 733px;
-  height: 175px;
-}
-.start {
-  top: 18px;
-  left: 52px;
-  font-weight: 800;
-  font-family: Inter;
-  color: #fff;
-  text-align: left;
-  width: 142px;
-}
-.rectangle-parent {
-  position: relative;
-  width: 194px;
-  height: 72px;
-}
-.group-wrapper {
-  cursor: pointer;
-  border: 0;
-  padding: 10px;
-  background-color: transparent;
-  position: absolute;
-  top: 559px;
-  left: 240px;
-  width: 410px;
+.landing-page {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  box-sizing: border-box;
+  align-items: center;
+  width: 100vw;
+  /*width: 100%;
+  max-width: 1200px;*/
+  margin: 0 auto;
 }
-.handsimage-parent {
-  position: relative;
-  width: 1440px;
-  height: 693px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.landing-page {
-  position: relative;
-  background-color: #fff;
+
+.section {
+  background-image: url('/public/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #333;
+  height: 788px;
   width: 100%;
-  overflow: hidden;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.content {
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 600px;
+  text-align: center;
+}
+
+.start-btn {
+  background-color: #E37576;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  mix-blend-mode: normal;
-  text-align: left;
-  font-size: 64px;
-  color: #000;
-  font-family: Jacques Francois;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
