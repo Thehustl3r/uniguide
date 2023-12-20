@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-router-dom';
 import Button from '../components/Button';
 
 const Header = () => {
@@ -12,10 +13,10 @@ const Header = () => {
       <div className='nav-section'>
         <nav className="nav-list">
           <ul>
-            <li><Link to="/home-page">HOME</Link></li>
-            <li>ABOUT</li>
-            <li>SERVICES</li>
-            <li>CONTACT US</li>
+            <li>HOME</li>
+            <li><ScrollLink to="AboutUs" smooth={true} duration={500}>ABOUT</ScrollLink></li>
+            <li><ScrollLink to="Services" smooth={true} duration={500}>SERVICES</ScrollLink></li>
+            <li><ScrollLink to="ContactUs" smooth={true} duration={500}>CONTACT US</ScrollLink></li>
           </ul>
         </nav>
       </div>

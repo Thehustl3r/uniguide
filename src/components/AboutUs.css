@@ -1,27 +1,39 @@
 .about-us {
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    width: 100%;
-    margin: 0 auto;
-    align-items: center;
-  }
-  
-  h3 {
-    color: #333;
-  }
-  
-  .content {
-    display: flex;
-    /*justify-content: center;*/
-    align-items: center;
-    margin-top: 20px;
-    text-align: center;
-    gap: 50px;
-  }
-  
-  .content-left,
-  .content-right {
-    flex: 1;
-    padding: 10px
-  }
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 40px;
+}
+
+h3 {
+  color: #333;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.content-left,
+.content-right {
+  flex: 1;
+  padding: 10px;
+  width: 200px;
+}
+
+.content-right {
+  text-align: center;
+}
+
+.content-left img {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: ;
+}

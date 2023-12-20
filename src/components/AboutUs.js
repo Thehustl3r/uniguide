@@ -10,15 +10,14 @@ const AboutUs = () => {
           <img src='uabout.png' alt='' />
         </div>
         <div className="content-right">
-          <p>
-            Welcome to UniGuide, a dynamic hub
-            where education transforms into empowerment.
+          <p className='txt2'>
+            Welcome to UniGuide, a dynamic hub where education transforms into empowerment.
             Our dedicated team is on a mission to redefine the
             educational journey for African students, paving the
             way for a brighter future through higher education.
           </p>
         </div>
-      </div>
+        </div>
     </div>
   );
 };
