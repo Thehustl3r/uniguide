@@ -13,6 +13,7 @@
     max-width: 100%;
     width: 239px;
     height: 167px;
+    flex-shrink: 0;
   }
   
   .nav-list {
@@ -33,9 +34,15 @@
   .nav-list li {
     margin-right: 20px;
     cursor: pointer;
+    font-size: 20;
+    font-family: 'Inter', sans-serif;
+    line-height: normal;
+    font-weight: 600;
+    color: #333;
   }
   
   .nav-list li:hover {
-    text-decoration: underline;
+    color: blue;
+
   }
   

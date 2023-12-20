@@ -5,7 +5,6 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
 import LogIn from './pages/LogIn';
 import SignUp from "./pages/SignUp";
@@ -65,8 +64,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/home-page" element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LogIn />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/user-profile" element={<UserProfile />} />
