@@ -15,22 +15,20 @@ const HomePage = () => {
       <div className='section'>
         <div className="sectionW1">
           <div className='sectionText'>
-            <div className='text'>
-              <p className='txt1'>Discover Your Perfect University Here</p>
-              <p className='txt2'>Explore a world of educational opportunities tailored to your preferences and find the ideal academic path that suits your goals. Start your educational journey today!</p>
+            <div className='landingPage-text'>
+              <h1>Discover Your Perfect University Here</h1>
+              <p >Explore a world of educational opportunities tailored to your preferences and find the ideal academic path that suits your goals. Start your educational journey today!</p>
               <div className='applyBtn'>
-              <Link to="/login">
-                <Button label="Apply Now" className="applyNowBtn" />
-              </Link>
-            </div>
+                <Link to="/login">
+                  <Button label="Apply Now" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-        <div className='sectionImage'>
-          <img src="/student.png" alt='' />
-        </div>
+        <img src="/student.png" alt='' className='landingPage-image' />
       </div>
-      <div className='section1'>
+      {/* <div className='section1'>
         <div className='grid-container'>
           <div className='text-container'>
             <div className='text'>
@@ -44,8 +42,8 @@ const HomePage = () => {
             <Button label="Start exploring" className="startExploringBtn" />
           </div>
         </div>
-      </div>
-  
+      </div> */}
+
       <AboutUs />
       <Services />
       <ContactUs />

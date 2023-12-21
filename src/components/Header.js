@@ -2,34 +2,21 @@ import React from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-router-dom';
-import Button from '../components/Button';
 
 const Header = () => {
   return (
     <header className="header">
-      <div className='logo'>
-        <img src="/ulogo.png" alt="" />
+      <img src="/ulogo.png" alt="" className='logo' />
+      <div className='nav-bar'>
+          <ScrollLink to="Home" smooth={true} duration={500}>Home</ScrollLink>
+          <ScrollLink to="AboutUs" smooth={true} duration={500}>ABOUT</ScrollLink>
+          <ScrollLink to="Services" smooth={true} duration={500}>SERVICES</ScrollLink>
+          <ScrollLink to="ContactUs" smooth={true} duration={500}>CONTACT US</ScrollLink>
       </div>
-      <div className='nav-section'>
-        <nav className="nav-list">
-          <ul>
-            <li>HOME</li>
-            <li><ScrollLink to="AboutUs" smooth={true} duration={500}>ABOUT</ScrollLink></li>
-            <li><ScrollLink to="Services" smooth={true} duration={500}>SERVICES</ScrollLink></li>
-            <li><ScrollLink to="ContactUs" smooth={true} duration={500}>CONTACT US</ScrollLink></li>
-          </ul>
-        </nav>
-      </div>
-      <nav>
-        <Button label="SEARCH" />
-      </nav>
-      <div className='nav-section'>
-        <nav className="nav-list">
-          <ul>
-            <li><Link to="/login">LOGIN</Link></li>
-            <li><Link to="/signup">SIGNUP</Link></li>
-          </ul>
-        </nav>
+      <input className='search-box'></input>
+      <div className='nav-bar'>
+          <Link to="/login">LOGIN</Link>
+          <Link to="/signup">SIGNUP</Link>
       </div>
     </header>
   );

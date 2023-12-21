@@ -1,48 +1,114 @@
 .contact-us {
-  text-align: center;
-  background-color: #fff;
-  width: 100%;
-  margin: 0 auto;
+  height: 100%;
+  font-family: Jacques Francois;
+  font-style: normal;
+  justify-content: center;
   align-items: center;
-  padding: 40px;
-}
-.main-box {
-  position: relative;
-  display: grid;
-  margin: 20px;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
+
+
 }
 
-.header-container {
-  background-color: #778291;
-  padding: 20px;
-  text-align: center;
+.getInTouch-box {
+  display: flex;
+  width: 898px;
+  /* width: 65%; */
+  height: 300px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: #778291;
+}
+
+.getInTouch-box h3 {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .contactContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 20px;
+  width: 690px;
+  height: 83px;
+  gap: 20px;
+  flex-shrink: 0;
 }
 
 .inner-box {
-  flex: 1;
-  padding: 10px;
-  margin-right: 10px;
+  display: flex;
   background-color: #fff;
-  width: 200px;
-  height: 150px;
-  line-height: 1.2;
+  width: 214px;
+  height: 83px;
+  padding: 0px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
 
-.extended-box {
-  position: absolute;
-  width: auto;
+.inner-box h2 {
+  color: #778291;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.inner-box p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.circle {
+  width: 47px;
+  height: 49px;
+  flex-shrink: 0;
+  fill: #bbafaf;
+}
+
+.newsletter-box {
+  display: flex;
+  width: 608px;
+  height: 157px;
+  padding: 10px 20px;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 300px; */
+  margin-left: 150px;
+  margin-top: -40px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.newsletter-box h2 {
+  color: #E37576;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.input-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.newsletter-input {
+  display: flex;
+  width: 375px;
+  height: 34px;
   padding: 10px;
-  bottom: -60px;
-  left: 100px;
-  right: 100px;
-  background-color: #581111;
+  align-items: center;
+  gap: 10px;
+}
+
+.newsletter-box button {
+  width: 140px;
+  color: white;
+  height: 34px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background: #E37576;
 }
