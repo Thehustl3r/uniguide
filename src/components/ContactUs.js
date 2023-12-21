@@ -31,7 +31,7 @@ const ContactUs = () => {
 
                         <div>
                             <h2>Email Us</h2>
-                            <p>slvshimwa@gmail.com.</p>
+                            <p>uniguide@gmail.com.</p>
                         </div>
                     </div>
                 </div>

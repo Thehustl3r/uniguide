@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Element } from 'react-scroll';
 
 
 const cards = [
@@ -35,7 +36,8 @@ const defaultTheme = createTheme();
 
 export default function Services() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <Element name='Services'>
+      <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <main>
         <Box
@@ -91,5 +93,6 @@ export default function Services() {
         </Container>
       </main>
     </ThemeProvider>
+    </Element>
   );
 }

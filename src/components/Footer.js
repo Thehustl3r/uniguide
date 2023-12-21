@@ -13,7 +13,7 @@ const Footer = () => {
                         <img src='./call.png' alt=''/>
                     </div>
                     <div className='f-text'>
-                        <p>+250725317338</p>
+                        <p>+250788555765</p>
                     </div>
                 </div>
                 <div className='footer-item1'>
