@@ -7,11 +7,10 @@
   }
 .slidingView{
     width: 100%;
+    padding: 0px 200px;
     /* margin-right: 0px; */
 }
-h2{
-    margin-left: 30px;
-}
+
 .viewSection{
     display: flex;
     flex-direction: column;
