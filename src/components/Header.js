@@ -1,23 +1,35 @@
 import React from 'react';
-import './Header.css'
-import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-router-dom';
+import HeaderCSS from './Header.module.css'
+import TextCSS from '../appCSS/appText_css.module.css'
+import BoxCSS from '../appCSS/appBox_css.module.css'
+import { IoSearch } from "react-icons/io5";
+// import { Link } from 'react-router-dom';
+// import { Link as ScrollLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="header">
-      <img src="/ulogo.png" alt="" className='logo' />
-      <div className='nav-bar'>
-          <ScrollLink to="Home" smooth={true} duration={500}>Home</ScrollLink>
-          <ScrollLink to="AboutUs" smooth={true} duration={500}>ABOUT</ScrollLink>
-          <ScrollLink to="Services" smooth={true} duration={500}>SERVICES</ScrollLink>
-          <ScrollLink to="ContactUs" smooth={true} duration={500}>CONTACT US</ScrollLink>
+    <header className={HeaderCSS.header}>
+      <>
+        <img src="/ulogo.png" alt="" className={HeaderCSS.logo} />
+        <div className={`${HeaderCSS.nav_bar} ${TextCSS.big_text}`}>
+          <div>Home</div>
+          <div>About Us</div>
+          <div>Universities</div>
+          <div>Scholarship</div>
+        </div>
+      </>
+      <>
+      <div className={HeaderCSS.search_box}>
+      <input placeholder='Search'></input>
+      <IoSearch className={HeaderCSS.icon}/>
+      
       </div>
-      <input className='search-box'></input>
-      <div className='nav-bar'>
-          <Link to="/login">LOGIN</Link>
-          <Link to="/signup">SIGNUP</Link>
-      </div>
+        
+        <div className={BoxCSS.box}>
+          <div className={HeaderCSS.login}>LOGIN</div>
+          <div className={HeaderCSS.signup}>SIGNUP</div>
+        </div>
+      </>
     </header>
   );
 };

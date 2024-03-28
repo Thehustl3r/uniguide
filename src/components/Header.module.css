@@ -1,0 +1,80 @@
+:root {
+  --pink: #E37576; /* Assuming the value from app_color.js */
+  --black: #2C2C2C;
+  --white: #FFFFFF;
+  --blue:  #2C3E50;
+  /* ... define other colors similarly */
+}
+
+.header {
+  display: flex;
+  /* flex-direction: row; */
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  height: 110px;
+  margin-right: 150px;
+  margin-left: 100px;
+}
+
+.logo {
+  /* max-width: 100%; */
+  width: 200px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.search_box {
+  display: flex;
+  /* width: 200px; */
+  height: 40px;
+  color: white;
+  background-color: var(--pink);
+  padding: 10px;
+}
+.search_box input{
+  background-color: var(--pink);
+  color: var(--white);
+  font-size: medium;
+  font-weight: 400;
+  padding: 20px;
+  margin-top: -10px;
+  height: 30px;
+  width: 190px;
+  border: none;
+  outline: none;
+}
+.icon{
+  height: auto;
+}
+.nav_bar {
+  display: flex;
+  gap: 20px;
+
+}
+.login{
+  width: 125px;
+  height: 40px;
+  background-color: var(--pink);
+  text-align: center;
+  align-content: center;
+  color: var(--white);
+  margin: 5px;
+}
+.signup{
+  width: 125px;
+  height: 40px;
+  /* background-color: var(--pink); */
+  border-radius: 2px;
+  border-color: var(--pink);
+  text-align: center;
+  align-content: center;
+  color: var(--pink);
+  border-style: solid;
+  margin: 5px;
+}
+nav :hover {
+  color: blue;
+
+}

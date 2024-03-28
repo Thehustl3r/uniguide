@@ -1,24 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css';
+import HomePageCSS from './HomePage.module.css';
 import Button from '../components/Button';
 import Header from '../components/Header';
-import AboutUs from '../components/AboutUs';
-import Services from '../components/Services';
 import Footer from '../components/Footer';
-import ContactUs from '../components/ContactUs';
+import AppTextCSS from '../appCSS/appText_css.module.css'
+import SlidingView from '../components/sliding_view';
+import CountryList from '../components/country_list';
 
 const HomePage = () => {
   return (
-    <div className="home-page">
+    <div className={HomePageCSS.homePage}>
       <Header />
-      <div className='section'>
-        <div className="sectionW1">
-          <div className='sectionText'>
-            <div className='landingPage-text'>
+
+      <div className={HomePageCSS.section}>
+        <div className={HomePageCSS.sectionW1}>
+          <div className={HomePageCSS.sectionText}>
+            <div className={HomePageCSS.landingPage_text}>
               <h1>Discover Your Perfect University Here</h1>
               <p >Explore a world of educational opportunities tailored to your preferences and find the ideal academic path that suits your goals. Start your educational journey today!</p>
-              <div className='applyBtn'>
+              <div className={HomePageCSS.applyBtn}>
                 <Link to="/login">
                   <Button label="Apply Now" />
                 </Link>
@@ -26,7 +27,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <img src="/student.png" alt='' className='landingPage-image' />
+        <img src="/student.png" alt='' className={HomePageCSS.landingPage_image} />
       </div>
       {/* <div className='section1'>
         <div className='grid-container'>
@@ -43,10 +44,23 @@ const HomePage = () => {
           </div>
         </div>
       </div> */}
+      <div className={HomePageCSS.statics}>
+        <div>
+          <h1 className={AppTextCSS.largeText}>300+</h1>
+          <p>Universities</p>
+        </div>
+        <div>
+          <h1 className={AppTextCSS.largeText}>300+</h1>
+          <p>Scholarships</p>
+        </div>
+      </div>
+      <SlidingView/>
+      <SlidingView/>
+      <h2 className={AppTextCSS.bigText}>Choose from countries</h2>
+      <CountryList/>
 
-      <AboutUs />
-      <Services />
-      <ContactUs />
+
+      
       <Footer />
     </div>
   );

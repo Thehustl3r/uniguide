@@ -1,0 +1,19 @@
+.largeText{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 100px;
+    text-decoration: none;
+}
+.bigText{
+    /* color: var(--heavy-metal); */
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 100px;
+    text-decoration: none;
+}
+.smallText{
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 100px;
+    text-decoration: none;
+}

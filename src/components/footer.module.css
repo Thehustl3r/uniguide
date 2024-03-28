@@ -1,0 +1,38 @@
+:root {
+  --pink: #E37576; /* Assuming the value from app_color.js */
+  --black: #2C2C2C;
+  --white: #FFFFFF;
+  --blue:  #2C3E50;
+  /* ... define other colors similarly */
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  width: 100%;
+  align-items: flex-start;
+  padding: 0px 200px;
+
+  justify-content: space-between;
+  height: 300px;
+}
+.footerBody{
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-between;
+  width: 100%;
+}
+.block{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.block a{
+  text-decoration: none;
+  color: var(--white);
+}
+.subscribe{
+  padding-left: 0px;
+}

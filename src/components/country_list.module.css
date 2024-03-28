@@ -1,0 +1,6 @@
+.gridContainer{
+  display: grid;
+  grid-template-columns: repeat(6,  40fr); 
+  grid-template-rows: 10; /* Ten rows with minimum content height */
+  grid-gap: 20px 100px;
+}

@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+  --pink: #E37576; /* Assuming the value from app_color.js */
+  --black: #2C2C2C;
+  --white: #FFFFFF;
+  --blue:  #2C3E50;
+  /* ... define other colors similarly */
+}
+
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  color: var(--blue);
+}

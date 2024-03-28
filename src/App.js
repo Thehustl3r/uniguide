@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import './global.css'
 import {
   Routes,
   Route,

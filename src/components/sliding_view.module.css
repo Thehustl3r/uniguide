@@ -1,0 +1,36 @@
+:root {
+    --pink: #E37576; /* Assuming the value from app_color.js */
+    --black: #2C2C2C;
+    --white: #FFFFFF;
+    --blue:  #2C3E50;
+    /* ... define other colors similarly */
+  }
+.slidingView{
+    width: 100%;
+    /* margin-right: 0px; */
+}
+h2{
+    margin-left: 30px;
+}
+.viewSection{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 310px;
+    background-color: var(--blue);
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    color: var(--white);
+    padding: 30px 100px;
+
+}
+.viewSection text{
+    margin-right: 10px;
+}
+.viewSection span{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
