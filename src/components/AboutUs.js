@@ -1,9 +1,11 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import './AboutUs.css';
 
 const AboutUs = () => {
   return (
-    <div className="about-us">
+    <Element name='AboutUs'>
+      <div className="about-us">
       <h3>About Us</h3>
       <div className="content">
         <img src='uabout.png' alt='' />
@@ -16,6 +18,7 @@ const AboutUs = () => {
         </p>
       </div>
     </div>
+    </Element>
   );
 };
 

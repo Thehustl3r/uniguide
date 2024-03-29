@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -11,11 +10,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import backgroundImageUrl from '../pages/bg.jpg';
 const defaultTheme = createTheme();
 
 export default function LOgIn() {
-  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -25,22 +22,10 @@ export default function LOgIn() {
       password: data.get('password'),
     });
 
-    navigate('/user-profile')
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <div
-        style={{
-          backgroundImage: `url(${backgroundImageUrl})`,
-          width: '100%',
-          minHeight: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '20px',
-        }}
-      >
         <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -49,7 +34,7 @@ export default function LOgIn() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundColor: 'skyblue',
+            backgroundColor: 'rgba(119, 130, 145, 1)',
             padding: '20px',
             width:'600px',
           }}
@@ -110,7 +95,6 @@ export default function LOgIn() {
           </Box>
         </Box>
       </Container>
-      </div>
       
     </ThemeProvider>
   );

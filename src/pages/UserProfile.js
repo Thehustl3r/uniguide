@@ -4,7 +4,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -51,10 +50,13 @@ export default function UserProfile() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 1,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            backgroundColor: 'rgba(119, 130, 145, 1)',
+            padding: '20px',
+            width:'600px',
           }}
         >
           <img src="/ulogo.png" alt="" style={{ width: '200px', height: '200px' }}/>  

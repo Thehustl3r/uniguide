@@ -3,7 +3,6 @@ import FooterCSS from './footer.module.css'
 import AppTextCSS from '../appCSS/appText_css.module.css'
 import BoxCSS from '../appCSS/appBox_css.module.css'
 
-import { Button } from '@mui/material';
 const Footer = () => {
   return (
     <footer className={FooterCSS.footer}>
