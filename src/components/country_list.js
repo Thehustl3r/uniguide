@@ -1,5 +1,5 @@
 import React from "react";
-import GridCss from './country_list.module.css'
+import GridCss from './component_style.module.css'
 
 const CountryList = ()=>{
     const countryList = [];

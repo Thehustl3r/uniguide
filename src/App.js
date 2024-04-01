@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import LogIn from './pages/LogIn';
 import SignUp from "./pages/SignUp";
 import UserProfile from "./pages/UserProfile";
+import SchoolPage from "./pages/school_page"
 
 function App() {
   const action = useNavigationType();
@@ -65,7 +66,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<SchoolPage />} />
       <Route path="/login" element={<LogIn />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/user-profile" element={<UserProfile />} />

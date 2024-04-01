@@ -1,0 +1,103 @@
+:root {
+  --pink: #E37576; /* Assuming the value from app_color.js */
+  --black: #2C2C2C;
+  --white: #FFFFFF;
+  --blue:  #2C3E50;
+  /* ... define other colors similarly */
+}
+.gridContainer{
+  display: grid;
+  grid-template-columns: repeat(6,  40fr); 
+  grid-template-rows: 10; /* Ten rows with minimum content height */
+  grid-gap: 20px 100px;
+}
+.filterBlock{
+  display: flex;
+  width: 100%;
+  padding: 20px 17.6%;
+  gap: 80px;
+}
+.filterBlock select{
+  width: 250px;
+  height: 50px;
+  padding: 10px 30px;
+  font-size: 20px;
+}
+.filterBlock button{
+  width: 250px;
+  height: 50px;
+  padding: 10px 30px;
+  background-color: var(--pink);
+  color: var(--white);
+
+}
+
+/* Css for slinding grid view like tredding university */
+.slidingGridView{
+  width: 100%;
+  padding: 20px 17.6%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card{
+  width: 500px;
+  height: 250px;
+  /* border: 1px solid; */
+  margin-right: 10px;
+  padding: 0px 20px;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent); /* Gradient for the shadow */
+}
+.slidingView{
+  display: flex;
+  overflow-x: hidden;
+}
+.slidingGridView button{
+  width: 30px;
+  border: none;
+  background-color: none;
+}
+
+.scrollable_button{
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-between;
+  top: 40;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+}
+
+/* Treding countries style */
+.tredingCountries{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 17.6%;
+}
+.countries_grid{
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:  20 0px;
+  grid-template-rows: repeat(2, 1fr);
+  overflow-x: hidden;
+
+}
+.countries_grid .card{
+  display: flex;
+  justify-content: center;
+  width: 310px;
+  align-items: end;
+}
+.countries_grid .card:hover{
+  cursor: pointer;
+}
+.tredingCountries h5{
+  color: var(--pink);
+  margin: 0 auto;
+}
+.tredingCountries h5:hover{
+  cursor: pointer;
+}

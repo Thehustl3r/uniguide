@@ -9,27 +9,22 @@ import { IoSearch } from "react-icons/io5";
 const Header = () => {
   return (
     <header className={HeaderCSS.header}>
-      <>
-        <img src="/ulogo.png" alt="" className={HeaderCSS.logo} />
-        <div className={`${HeaderCSS.nav_bar} ${TextCSS.big_text}`}>
-          <div>Home</div>
-          <div>About Us</div>
-          <div>Universities</div>
-          <div>Scholarship</div>
-        </div>
-      </>
-      <>
-      <div className={HeaderCSS.search_box}>
-      <input placeholder='Search'></input>
-      <IoSearch className={HeaderCSS.icon}/>
-      
+      <img src="/ulogo.png" alt="" className={HeaderCSS.logo} />
+      <div className={`${HeaderCSS.nav_bar} ${TextCSS.big_text}`}>
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Universities</div>
+        <div>Scholarship</div>
       </div>
-        
-        <div className={BoxCSS.box}>
-          <div className={HeaderCSS.login}>LOGIN</div>
-          <div className={HeaderCSS.signup}>SIGNUP</div>
-        </div>
-      </>
+      <div className={HeaderCSS.search_box}>
+        <input placeholder='Search'></input>
+        <IoSearch className={HeaderCSS.icon} />
+
+      </div>
+      <div className={BoxCSS.box}>
+        <div className={HeaderCSS.login}>LOGIN</div>
+        <div className={HeaderCSS.signup}>SIGNUP</div>
+      </div>
     </header>
   );
 };
