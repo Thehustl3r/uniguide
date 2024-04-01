@@ -3,6 +3,7 @@ import HeaderCSS from './Header.module.css'
 import TextCSS from '../appCSS/appText_css.module.css'
 import BoxCSS from '../appCSS/appBox_css.module.css'
 import { IoSearch } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 // import { Link as ScrollLink } from 'react-router-dom';
 
@@ -11,10 +12,16 @@ const Header = () => {
     <header className={HeaderCSS.header}>
       <img src="/ulogo.png" alt="" className={HeaderCSS.logo} />
       <div className={`${HeaderCSS.nav_bar} ${TextCSS.big_text}`}>
-        <div>Home</div>
-        <div>About Us</div>
-        <div>Universities</div>
-        <div>Scholarship</div>
+        <Link to={'/'}>
+          <div>Home</div>
+        </Link>
+        <Link to={'/about'}>
+          <div>About Us</div>
+        </Link><Link to={'/schools'}>
+          <div>Universities</div>
+        </Link><Link to={'/scholarships'}>
+          <div>Scholarships</div>
+        </Link>
       </div>
       <div className={HeaderCSS.search_box}>
         <input placeholder='Search'></input>
@@ -22,8 +29,8 @@ const Header = () => {
 
       </div>
       <div className={BoxCSS.box}>
-        <div className={HeaderCSS.login}>LOGIN</div>
-        <div className={HeaderCSS.signup}>SIGNUP</div>
+        <Link to={'/login'} className={HeaderCSS.login}>LOGIN</Link>
+        <Link to={'/signup'} className={HeaderCSS.signup}>SIGNUP</Link>
       </div>
     </header>
   );
