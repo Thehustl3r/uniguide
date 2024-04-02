@@ -12,7 +12,22 @@ const ScholarshipPage = () => {
         <FilterBlock />
         <SlidingGridView />
         <TredingCountries />
-        
+        <div className={`${PageStyeCSS.discription} `}>
+            <h5 className={AppText.bigText}>Find and Compare University Scholarships Africa</h5>
+            <h5 className={AppText.bigText}>Scholarships, grants, fellowships and other student funding</h5>
+            <p>
+                Find and compare scholarships for college students, college grants, fellowships, federal financial aid and other forms of student funding to cover expenses for international Bachelors, Masters and PhDs worldwide.
+            </p>
+            <p>
+            Uniguide is the best scholarship website for international students looking to meet their financial needs. Browse comprehensive scholarship lists available for a wide variety of destinations abroad. Start your scholarship search by choosing a study location and selecting one of over 1000 opportunities for student financial aid available in the Rwanda, Kenya, Nigeria, Uganda, South Africa, Ghana, Senegal, and many others.
+            </p>
+            <p>
+            Apply for a university scholarship in a degree subject that interests you from top MBA scholarships, engineering scholarships, scholarships for law schools and medical schools, as well as art, sports or music scholarships, and many more.
+            </p>
+
+
+
+        </div>
         <Footer />
     </div>)
 }

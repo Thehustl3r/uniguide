@@ -101,3 +101,48 @@
 .tredingCountries h5:hover{
   cursor: pointer;
 }
+
+
+/* review View style */
+.reviewView{
+  width: 950px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #778291;
+  text-align: center;
+}
+.cardSection{
+  width: auto;
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+}
+.review{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ratings{
+  display: flex;
+  align-items: center;
+  margin-top: -40px;
+  margin-left: 60px;
+
+}
+.ratings span{
+  display: flex;
+  margin-right: -40px;
+
+}
+.ratings .star{
+  color: yellow;
+  font-size: 12px;
+}
+.reviewView u{
+  color: var(--pink);
+}
+.reviewView u:hover{
+  cursor: pointer;
+}
