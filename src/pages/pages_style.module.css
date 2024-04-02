@@ -1,10 +1,73 @@
+:root {
+  --pink: #E37576; /* Assuming the value from app_color.js */
+  --black: #2C2C2C;
+  --white: #FFFFFF;
+  --blue:  #2C3E50;
+  /* ... define other colors similarly */
+}
 *{
     width: 100%;
 }
-/* School page style */
+/* Scholarships page style */
 .discription{
     width: 100%;
   padding: 20px 17.6%;
   text-align: center;
   margin: 10px 0;
+}
+
+/* Abourt page style */
+.ourStory{
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: var(--blue);
+  color: white;
+  margin-bottom: 50px;
+}
+.ourStory span{
+  width: 40%;
+  text-align: center;
+
+}
+.ourStory img{
+  width: 40%;
+}
+.ourStory p{
+  font-weight: 500;
+}
+.statics{
+  width: 700px;
+  margin: 10px auto;
+  display: flex;
+  gap: 40px;
+
+}
+.statics p{
+  margin-top: -20px;
+}
+.reachOut{
+  width: 600px;
+  padding: 40px;
+  margin: 20px auto;
+  border: 1px solid var(--blue);
+  border-radius: 30px;
+  text-align: center;
+}
+.reachOut input, textarea{
+  height: 40px;
+  margin: 10px 0;
+
+}
+.reachOut button{
+  width: 100px;
+  height: 40px;
+  color: var(--white);
+  background-color: var(--pink);
+  margin-top: 10px;
+  margin-bottom: -30px;
 }
