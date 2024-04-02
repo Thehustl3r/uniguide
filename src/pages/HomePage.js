@@ -54,13 +54,15 @@ const HomePage = () => {
           <p>Scholarships</p>
         </div>
       </div>
-      <SlidingView/>
-      <SlidingView/>
-      <h2 className={AppTextCSS.bigText}>Choose from countries</h2>
-      <CountryList/>
+      <SlidingView />
+      <SlidingView />
+      <div className={HomePageCSS.schoolList}>
+        <h2 className={AppTextCSS.bigText}>Choose from countries</h2>
+        <CountryList />
+      </div>
 
 
-      
+
       <Footer />
     </div>
   );
