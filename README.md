@@ -1,33 +1,95 @@
-# uniguide
-Description:
+# Project Name
 
-This project aims to develop a comprehensive web application that assists students from across Africa in finding suitable universities to pursue their higher education aspirations. The project will utilize a combination of Python (Django) for the backend development and React.js for the frontend development.
+Uniguide
+- "Connecting and Empowering Students accross Africa"
 
-Contributors:
+# Description the project
 
-Mugisha Prosper
-Shimwa Sylvie
+This project aims to develop a comprehensive web application that assists students from across Africa in finding suitable universities to pursue their higher education aspirations. Empowering African students, the platform provides a centralized hub for exploring and comparing universities, eliminating geographical barriers and simplifying the university search process. By facilitating informed decision-making, students can identify universities aligned with their academic interests, career goals, and financial considerations. Key features include a user-friendly interface for university search, detailed profiles for each institution, a comparison tool, and a centralized resource for exploring scholarship opportunities. Through improved access to education and enhanced decision-making, the project aims to contribute to educational equity, social mobility, and socioeconomic development across the continent.
 
-Technical Stack:
+# Project inspiration
+Uniguide, was inspired by the need to Empower African students with a cutting-edge digital platform designed to revolutionize university exploration and enrollment. 
+We envisioned creating a user-friendly platform that simplifies the process to Seamlessly navigate through a curated selection of institutions, effortlessly comparing programs, scholarships, and facilities. Unlocking opportunities for academic success, our project aims to bridge the gap between aspirations and reality, paving the way for brighter futures across the continent
 
-Backend: Python (Django)
-Frontend: React.js
-Project Goals:
+## Built With
 
-Empower African Students: Provide students with a centralized platform to explore and compare universities across Africa, facilitating informed decision-making regarding their academic pursuits.
-Enhance Accessibility: Eliminate geographical barriers and simplify the university search process for students from diverse backgrounds and locations.
-Promote Informed Choices: Assist students in identifying universities that align with their academic interests, career goals, and financial considerations.
-Project Features:
+- Languages: JavaScript (React)
+- Build Tool: Vite
+- Styling: Skeleton CSS
+- State Management: Redux
+- Backend: Python (Django)
 
-University Search: A user-friendly interface for searching universities based on various criteria, including location, program offerings, admission requirements, and tuition fees.
-University Profiles: Detailed profiles for each university, providing comprehensive information on academics, facilities, student life, and admission procedures.
-Comparison Tool: A feature to compare selected universities side-by-side, enabling students to make informed decisions based on their preferences.
-Scholarship Opportunities: A centralized resource for students to explore available scholarships and financial aid options.
-Project Impact:
+### Live LInk
+[Uniguide](https://uniguide-7lk7.onrender.com/api/)
 
-Improved Access to Education: Facilitate access to higher education for students across Africa, contributing to educational equity and social mobility.
-Enhanced Decision-Making: Empower students to make informed decisions about their university choices, leading to greater satisfaction and success in their academic endeavors.
-Promoted Educational Attainment: Increase the overall educational attainment levels in Africa, contributing to socioeconomic development and human capital growth.
-Join the Project:
+### Setup
 
-We welcome contributions from developers and individuals passionate about education and technology to help us realize the full potential of this project. Your contributions will directly impact the lives of African students, enabling them to pursue their educational dreams.
+> Clone the repository
+  
+    git clone
+    
+> cd into the directory
+    
+    
+    cd school_finder_project
+  
+> Install dependencies
+    
+   
+    pip install -r requirements.txt
+  
+> Run the app
+    
+    
+    python manage.py runserver
+   
+> Run the tests
+    
+  
+    npm run test
+  
+### Usage
+
+> open your directory in your terminal and run the following command
+
+\_use vs-code or any IDE to view line code .
+
+---
+
+$ python manage.py runserver  "to run the local server"
+
+---
+
+## Click here for live version
+
+- [Uniguide](https://uniguide-7lk7.onrender.com/api/)
+
+## Authors
+
+👤 **Jeremih Kuria**
+- GitHub: [@InfinityJer](https://github.com/InfinityJer)
+
+👤 **Godwin Okpe**
+- GitHub: [@OkpePhillips](https://github.com/OkpePhillips) 
+
+👤 **Prosper Mugisha**
+- GitHub: [Thehustl3r](https://github.com/Thehustl3r)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+thanks:
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
