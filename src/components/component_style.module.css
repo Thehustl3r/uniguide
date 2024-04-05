@@ -89,13 +89,16 @@
 
 
 .scrollable_button{
-  position: absolute;
+  /* position: absolute; */
     display: flex;
     width: inherit;
     top: inherit + 30px;
     justify-content: space-between;
     font-size: 33px;
     font-weight: 600;
+}
+.scrollable_button:hover{
+  cursor: pointer;
 }
 
 /* Treding countries style */
