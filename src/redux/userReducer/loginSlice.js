@@ -4,20 +4,32 @@ import axios from "axios";
 import Config from "../../config";
 
 const initialState = {
-    value: [],
-    isloading: false,
-    error: false,
+  value: [],
+  isloading: false,
+  error: false,
 }
 
 export const login = createAsyncThunk(
   'login',
   async (userData) => {
+    
     try {
-      
+      if (userData.length === 0) {
+        const getToken = () => {
+          return localStorage.getItem('token');
+        }
+        const token = getToken();
+        const { data } = await axios.post(`${Config.apiURL + Config.loginAPI}`,
+          { Headers: { Authorization: `Bearer ${token}` } });
+          
+        return data;
+
+      }
       const { data } = await axios.post(`${Config.apiURL + Config.loginAPI}`, userData);
-
+      localStorage.setItem('token', data.token);
+     
+      console.log(data)
       return data;
-
     } catch (error) {
       return error;
     }
@@ -25,26 +37,26 @@ export const login = createAsyncThunk(
 );
 
 const loginSlice = createSlice({
-    name: 'login',
-    initialState,
-    reducers:{},
-    extraReducers: builder => {
-        builder
-          .addCase(login.pending, (state) => {
-            state.isloading = true;
-          })
-          .addCase(login.fulfilled, (state, action) => {
-            state.value = action.payload;
-            state.error = false;
-            state.isloading = false;
-          })
-          .addCase(login.rejected, (state, action) => {
-            state.error = action.payload;
-            state.value = false;
-            state.isloading = false;
-          });
-      },
-    
-    });
+  name: 'login',
+  initialState,
+  reducers: {},
+  extraReducers: builder => {
+    builder
+      .addCase(login.pending, (state) => {
+        state.isloading = true;
+      })
+      .addCase(login.fulfilled, (state, action) => {
+        state.value = action.payload;
+        state.error = false;
+        state.isloading = false;
+      })
+      .addCase(login.rejected, (state, action) => {
+        state.error = action.payload;
+        state.value = false;
+        state.isloading = false;
+      });
+  },
+
+});
 
 export default loginSlice.reducer

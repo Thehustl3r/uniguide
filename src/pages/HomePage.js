@@ -14,11 +14,14 @@ import { fetchScholarship } from '../redux/scholarshipReducer/scholarshipSlice';
 
 const HomePage = () => {
   const dispatch = useDispatch();
+  const loginStatus = useSelector(state=>state.loginStatus)
   
 
   dispatch(fetchSchool());
   dispatch(fetchCountries());
   dispatch(fetchScholarship());
+  console.log(loginStatus);
+  // console.log(`is logged in: ${isLogedIn} by ${name}`);
 
   return (
     <div className={HomePageCSS.homePage}>

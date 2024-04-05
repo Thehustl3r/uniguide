@@ -1,32 +1,56 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { login } from '../redux/userReducer/loginSlice';
+import { useDispatch } from 'react-redux';
+import { setLoginStatus } from '../redux/authReducer/authSlice';
+
 const defaultTheme = createTheme();
 
-export default function LOgIn() {
+const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [errorMsg, setErrorMsg] = useState('');
 
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    try {
+      const loginResult = await dispatch(login({
+        email: data.get('email'),
+        password: data.get('password'),
+      }));
 
+      if (!loginResult.error) {
+        console.log(loginResult)
+        await dispatch(setLoginStatus({
+          islogedIn: true,
+          name: 'mp',
+          token: loginResult.token,
+        }));
+        navigate('/');
+      }else{
+        setErrorMsg("Incorrect email or password");
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      // Handle login error (e.g., display error message to user)
+    }
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
-        <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
@@ -36,14 +60,15 @@ export default function LOgIn() {
             alignItems: 'center',
             backgroundColor: 'rgba(119, 130, 145, 1)',
             padding: '20px',
-            width:'600px',
+            width: '600px',
           }}
         >
-          <img src="/ulogo.png" alt="" style={{ width: '200px', height: '200px' }}/>
+          <img src="/ulogo.png" alt="" style={{ width: '200px', height: '200px' }} />
           <Typography component="h1" variant="h5">
             Log in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}
             <TextField
               margin="normal"
               required
@@ -52,7 +77,7 @@ export default function LOgIn() {
               label="Email Address"
               name="email"
               autoComplete="email"
-              autoFocusI
+              autoFocus
             />
             <TextField
               margin="normal"
@@ -82,20 +107,21 @@ export default function LOgIn() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <RouterLink to="#" variant="body2">
                   Forgot password?
-                </Link>
+                </RouterLink>
               </Grid>
               <Grid item>
-                <Link to="/signup" variant="body2">
+                <RouterLink to="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
-                </Link>
+                </RouterLink>
               </Grid>
             </Grid>
           </Box>
         </Box>
       </Container>
-      
     </ThemeProvider>
   );
-}
+};
+
+export default Login;

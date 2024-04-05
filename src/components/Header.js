@@ -4,10 +4,13 @@ import TextCSS from '../appCSS/appText_css.module.css'
 import BoxCSS from '../appCSS/appBox_css.module.css'
 import { IoSearch } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 // import { Link } from 'react-router-dom';
 // import { Link as ScrollLink } from 'react-router-dom';
 
+
 const Header = () => {
+  const loginStatus = useSelector(state => state.loginStatus)
   return (
     <header className={HeaderCSS.header}>
       <img src="/ulogo.png" alt="" className={HeaderCSS.logo} />
@@ -28,10 +31,17 @@ const Header = () => {
         <IoSearch className={HeaderCSS.icon} />
 
       </div>
-      <div className={BoxCSS.box}>
-        <Link to={'/login'} className={HeaderCSS.login}>LOGIN</Link>
-        <Link to={'/signup'} className={HeaderCSS.signup}>SIGNUP</Link>
-      </div>
+      {!(loginStatus.islogedIn) ?
+        <div className={BoxCSS.box}>
+          <Link to={'/login'} className={HeaderCSS.login}>LOGIN</Link>
+          <Link to={'/signup'} className={HeaderCSS.signup}>SIGNUP</Link>
+        </div>
+        :
+        <div className={HeaderCSS.profileAvatar}>
+          {loginStatus.name.toUpperCase()}
+        </div>
+      }
+
     </header>
   );
 };

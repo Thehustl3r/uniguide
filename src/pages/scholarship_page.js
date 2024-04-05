@@ -3,14 +3,20 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FilterBlock from "../components/filtter_block";
 import PageStyeCSS from "./pages_style.module.css"
-import SlidingGridView from "../components/sliding_grid_view";
+import {SlidingGridViewForScholaship} from "../components/sliding_grid_view";
 import TredingCountries from "../components/trending_countries";
 import AppText from "../appCSS/appText_css.module.css"
+import { useDispatch } from "react-redux";
+import { fetchScholarship } from '../redux/scholarshipReducer/scholarshipSlice';
+
+
 const ScholarshipPage = () => {
+    const dispatch = useDispatch();
+    dispatch(fetchScholarship());
     return (<div className={PageStyeCSS.schoolPage}>
         <Header />
         <FilterBlock />
-        <SlidingGridView />
+        <SlidingGridViewForScholaship />
         <TredingCountries />
         <div className={`${PageStyeCSS.discription} `}>
             <h5 className={AppText.bigText}>Find and Compare University Scholarships Africa</h5>

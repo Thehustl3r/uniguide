@@ -18,17 +18,12 @@ export function SlidingViewForSchool({ title = 'Top' }) {
         }
     };
     const scrollRight = async () => {
-        console.log(index);
-        console.log(await universities.value.length);
-
         if (index < await universities.value.length) {
-
             setIndex(index + 1);
-            console.log(index);
         }
     }
 
-    return (<div className={SlidingViewCSS.slidingView}>
+    return (<div  className={SlidingViewCSS.slidingView}>
         <h2 className={AppText.bigText}>
             {title}
         </h2>
@@ -39,7 +34,7 @@ export function SlidingViewForSchool({ title = 'Top' }) {
             </span>
             {universities.isLoading ? <div>Loading</div> :
                 <div className={SlidingViewCSS.countryCard}>
-                    <a className={SlidingViewCSS.textSection} href={universities.value[index]?.website} target="_blank">
+                    <a className={SlidingViewCSS.textSection} href={universities?.value[index]?.website} target="_blank">
                         <h4>{universities.value[index]?.name}</h4>
                         <TfiNewWindow />
                     </a>
@@ -56,18 +51,11 @@ export function SlidingViewForScholarship({ title = 'Top' }) {
     const scrollLeft = () => {
         if (index > 0) {
             setIndex(index - 1);
-            console.log(index);
-
         }
     };
     const scrollRight = async () => {
-        console.log(index);
-        console.log(await scholarships.value.length);
-
         if (index < await scholarships.value.length) {
-
             setIndex(index + 1);
-            console.log(index);
         }
     }
 

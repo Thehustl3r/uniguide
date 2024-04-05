@@ -10,7 +10,7 @@ const CountryList = ()=>{
     
     return(
         <div className={GridCss.gridContainer}>
-           {countryList.map((e)=>{
+           {countryList?.map((e)=>{
             return(<div className={GridCss.noWrap}> {e.name}</div>)
            })} 
         </div>

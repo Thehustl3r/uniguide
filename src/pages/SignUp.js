@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -11,62 +11,63 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useDispatch, useSelector } from 'react-redux';
-import{addUser} from '../redux/userReducer/registerUserSlice'
+import { useDispatch } from 'react-redux';
+import { addUser } from '../redux/userReducer/registerUserSlice';
 import { login } from '../redux/userReducer/loginSlice';
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
   const navigate = useNavigate();
-  const dispatch =  useDispatch();
-    const [password, setPassword] = React.useState('');
-    const [confirmPassword, setConfirmPassword] = React.useState('');
-    const [passwordError, setPasswordError] = React.useState('');
+  const dispatch = useDispatch();
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [passwordError, setPasswordError] = useState('');
 
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-      };
-    
-      const handleConfirmPasswordChange = (event) => {
-        setConfirmPassword(event.target.value);
-      };
-    
-      const handleSubmit = async(event) => {
-        event.preventDefault();
-        console.log(event)
-    
-        // Check if passwords match
-        if (password !== confirmPassword) {
-          setPasswordError('Passwords do not match');
-          return;
-        }
-        const userData = {
-          first_name: event.target.first_name.value,
-          middle_name: event.target.middle_name.value,
-          last_name: event.target.last_name.value,
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Check if passwords match
+    if (password !== confirmPassword) {
+      setPasswordError('Passwords do not match');
+      return;
+    }
+
+    const userData = {
+      first_name: event.target.first_name.value,
+      middle_name: event.target.middle_name.value,
+      last_name: event.target.last_name.value,
+      email: event.target.email.value,
+      password: password,
+    };
+
+    try {
+      // Dispatch addUser action and wait for it to complete
+      await dispatch(addUser(userData));
+
+      // Dispatch login action and wait for it to complete
+      await dispatch(
+        login({
           email: event.target.email.value,
           password: password,
-        };
-        const signedUp = await dispatch(addUser(userData));
-        console.log(signedUp);
-        // const loginn = await dispatch(login({
-        //   email: event.target.email.value,
-        //   password: password,
-        // }))
-        // console.log(loginn);
+        })
+      );
 
-    
-        // Passwords match, continue with your form submission logic
-        console.log({
-          first_name: event.target.first_name.value,
-          middle_name: event.target.middle_name.value,
-          last_name: event.target.last_name.value,
-          email: event.target.email.value,
-          password: password,
-        });
-
-        navigate('/')
+      // Redirect or perform any other action upon successful login
+      // For example, navigate to a different page
+      navigate('/');
+    } catch (error) {
+      // Handle errors
+      console.error('Error during sign up:', error);
+    }
   };
 
   return (
@@ -81,10 +82,10 @@ export default function SignUp() {
             alignItems: 'center',
             backgroundColor: 'rgba(119, 130, 145, 1)',
             padding: '20px',
-            width:'600px',
+            width: '600px',
           }}
         >
-          <img src="/ulogo.png" alt="" style={{ width: '200px', height: '200px' }}/>
+          <img src="/ulogo.png" alt="" style={{ width: '200px', height: '200px' }} />
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
@@ -173,7 +174,7 @@ export default function SignUp() {
                 mt: 3,
                 mb: 2,
                 backgroundColor: 'rgba(227, 117, 118, 1)',
-            }}
+              }}
             >
               Sign Up
             </Button>
