@@ -1,9 +1,11 @@
 import React from "react";
 import TredingCountriesCSS from "./component_style.module.css"
 import AppText from "../appCSS/appText_css.module.css"
+import { UseSelector } from "react-redux/es/hooks/useSelector";
 
 
 const TredingCountries = () => {
+    
     const card = <div className={TredingCountriesCSS.card}>
 
         <h4>Scholarship in Rwanda</h4>

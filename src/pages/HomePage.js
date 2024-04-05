@@ -5,10 +5,21 @@ import Button from '../components/Button';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AppTextCSS from '../appCSS/appText_css.module.css'
-import SlidingView from '../components/sliding_view';
+import {SlidingViewForSchool, SlidingViewForScholarship} from '../components/sliding_view';
 import CountryList from '../components/country_list';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchSchool } from '../redux/schoolReducer/schoolSlice';
+import { fetchCountries } from '../redux/locationReducer/countrySlice';
+import { fetchScholarship } from '../redux/scholarshipReducer/scholarshipSlice';
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+  
+
+  dispatch(fetchSchool());
+  dispatch(fetchCountries());
+  dispatch(fetchScholarship());
+
   return (
     <div className={HomePageCSS.homePage}>
       <Header />
@@ -54,8 +65,14 @@ const HomePage = () => {
           <p>Scholarships</p>
         </div>
       </div>
-      <SlidingView />
-      <SlidingView />
+      <SlidingViewForSchool
+        title={'Popular Univesity'}
+      />
+      <SlidingViewForScholarship
+        title={'Treding Scholarship'}
+
+
+      />
       <div className={HomePageCSS.schoolList}>
         <h2 className={AppTextCSS.bigText}>Choose from countries</h2>
         <CountryList />

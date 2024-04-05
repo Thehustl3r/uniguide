@@ -7,7 +7,7 @@
   align-items: center;
   width: 100%;
   gap: 50px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .section {
@@ -99,6 +99,8 @@
 .schoolList{
   width: 100%;
   padding: 20px 17.6%;
+  overflow-x: hidden;
+  /* gap: 20px; */
 }
 
 

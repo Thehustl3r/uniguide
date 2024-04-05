@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, {  useRef } from "react";
 import SlidingGridViewCSS from "./component_style.module.css"
 import AppText from "../appCSS/appText_css.module.css"
 import { TfiNewWindow } from "react-icons/tfi";

@@ -5,12 +5,20 @@
   --blue:  #2C3E50;
   /* ... define other colors similarly */
 }
+/* Style for school list*/
 .gridContainer{
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(6,  40fr); 
-  grid-template-rows: 10; /* Ten rows with minimum content height */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  grid-template-rows: repeat(auto-fit); /* Ten rows with minimum content height */
   grid-gap: 20px 100px;
+  margin: 0;
+  overflow-x: hidden;
 }
+.noWrap{
+  white-space: nowrap;
+}
+/* Style for filtering */
 .filterBlock{
   display: flex;
   width: 100%;

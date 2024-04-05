@@ -11,12 +11,15 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { useDispatch, useSelector } from 'react-redux';
+import{addUser} from '../redux/userReducer/registerUserSlice'
+import { login } from '../redux/userReducer/loginSlice';
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
   const navigate = useNavigate();
+  const dispatch =  useDispatch();
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
     const [passwordError, setPasswordError] = React.useState('');
@@ -29,24 +32,41 @@ export default function SignUp() {
         setConfirmPassword(event.target.value);
       };
     
-      const handleSubmit = (event) => {
+      const handleSubmit = async(event) => {
         event.preventDefault();
+        console.log(event)
     
         // Check if passwords match
         if (password !== confirmPassword) {
           setPasswordError('Passwords do not match');
           return;
         }
+        const userData = {
+          first_name: event.target.first_name.value,
+          middle_name: event.target.middle_name.value,
+          last_name: event.target.last_name.value,
+          email: event.target.email.value,
+          password: password,
+        };
+        const signedUp = await dispatch(addUser(userData));
+        console.log(signedUp);
+        // const loginn = await dispatch(login({
+        //   email: event.target.email.value,
+        //   password: password,
+        // }))
+        // console.log(loginn);
+
     
         // Passwords match, continue with your form submission logic
         console.log({
-          firstName: event.target.firstName.value,
-          middleName: event.target.middleName.value,
-          lastName: event.target.lastName.value,
+          first_name: event.target.first_name.value,
+          middle_name: event.target.middle_name.value,
+          last_name: event.target.last_name.value,
           email: event.target.email.value,
           password: password,
         });
-        navigate('/user-profile')
+
+        navigate('/')
   };
 
   return (
@@ -73,10 +93,10 @@ export default function SignUp() {
               <Grid item xs={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="first_name"
                   required
                   fullWidth
-                  id="firstName"
+                  id="first_name"
                   label="First Name"
                   autoFocus
                 />
@@ -84,10 +104,10 @@ export default function SignUp() {
               <Grid item xs={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="middleName"
+                  name="middle_name"
                   required
                   fullWidth
-                  id="middleName"
+                  id="middle_name"
                   label="Middle Name"
                   autoFocus
                 />
@@ -96,9 +116,9 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
+                  id="last_name"
                   label="Last Name"
-                  name="lastName"
+                  name="last_name"
                   autoComplete="family-name"
                 />
               </Grid>
@@ -159,7 +179,7 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="login" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
