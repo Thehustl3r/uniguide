@@ -11,16 +11,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchSchool } from '../redux/schoolReducer/schoolSlice';
 import { fetchCountries } from '../redux/locationReducer/countrySlice';
 import { fetchScholarship } from '../redux/scholarshipReducer/scholarshipSlice';
+import { setLoginStatus } from '../redux/authReducer/authSlice';
 
 const HomePage = () => {
   const dispatch = useDispatch();
   const loginStatus = useSelector(state=>state.loginStatus)
+  const loginState = useSelector(state => state.login)
   
 
   dispatch(fetchSchool());
   dispatch(fetchCountries());
   dispatch(fetchScholarship());
-  console.log(loginStatus);
+  // if(loginState.error){
+  //   dispatch(setLoginStatus({
+  //     islogedIn: true,
+  //     name: `${loginState.value?.user?.first_name[0]?? ''}${loginState.value?.user?.last_name[0]??''}`,
+  //     token: loginState.value?.token??'',
+  //   }));
+  // }
+  // console.log(loginStatus);
+  // console.log(loginState);
+
   // console.log(`is logged in: ${isLogedIn} by ${name}`);
 
   return (

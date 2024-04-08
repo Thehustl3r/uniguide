@@ -10,17 +10,18 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { login } from '../redux/userReducer/loginSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setLoginStatus } from '../redux/authReducer/authSlice';
+import LoadingIndicator from '../components/loading_indicator';
+import { login } from '../redux/userReducer/loginSlice';
 
 const defaultTheme = createTheme();
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [errorMsg, setErrorMsg] = useState('');
-
+  const [loginFail, setLoginFailed] = useState(false);
+  const loginState = useSelector(state => state.login);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -31,19 +32,19 @@ const Login = () => {
         password: data.get('password'),
       }));
 
-      if (!loginResult.error) {
-        console.log(loginResult)
-        await dispatch(setLoginStatus({
-          islogedIn: true,
-          name: 'mp',
-          token: loginResult.token,
-        }));
-        navigate('/');
-      }else{
-        setErrorMsg("Incorrect email or password");
-      }
+      dispatch(setLoginStatus({
+        islogedIn: true,
+        name: `${loginResult['payload']?.user?.first_name[0] ?? 'P'}${loginResult['payload']?.user?.last_name[0] ?? 'M'}`,
+        token: loginResult['payload']?.token ?? '',
+      }));
+      console.log(`login succed`);
+
+      navigate('/');
+
     } catch (error) {
       console.error('Login error:', error);
+      setLoginFailed(true);
+      return;
       // Handle login error (e.g., display error message to user)
     }
   };
@@ -68,7 +69,7 @@ const Login = () => {
             Log in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-          {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}
+            {loginFail && <p style={{ color: 'red' }}>Incorrect password or userName</p>}
             <TextField
               margin="normal"
               required
@@ -93,18 +94,38 @@ const Login = () => {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{
-                mt: 3,
-                mb: 2,
-                backgroundColor: 'rgba(227, 117, 118, 1)',
-              }}
-            >
-              Log In
-            </Button>
+            {
+              loginState?.isloading ?
+                <div>
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{
+                      mt: 3,
+                      mb: 2,
+                      backgroundColor: 'rgba(227, 117, 118, 1)',
+                    }}
+                  >
+                    Log In
+                  </Button>
+                  < LoadingIndicator />
+
+                </div>
+                :
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  sx={{
+                    mt: 3,
+                    mb: 2,
+                    backgroundColor: 'rgba(227, 117, 118, 1)',
+                  }}
+                >
+                  Log In
+                </Button>
+            }
             <Grid container>
               <Grid item xs>
                 <RouterLink to="#" variant="body2">

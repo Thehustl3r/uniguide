@@ -15,23 +15,40 @@ export const login = createAsyncThunk(
     
     try {
       if (userData.length === 0) {
-        const getToken = () => {
-          return localStorage.getItem('token');
+        const token = localStorage.getItem('token');
+        const response = await axios.post(
+          `${Config.apiURL + Config.loginAPI}`,
+          {}, // Empty body for token-based login
+          { headers: { Authorization: `Bearer ${token}` } }
+        );
+        if (response.status >= 200 && response.status < 300) {
+          return response.data;
+        } else {
+          // Handle error response
+          throw new Error(`Request failed with status ${response.status}`);
         }
-        const token = getToken();
-        const { data } = await axios.post(`${Config.apiURL + Config.loginAPI}`,
-          { Headers: { Authorization: `Bearer ${token}` } });
-          
-        return data;
+      } else {
+        const response = await axios.post(
+          `${Config.apiURL + Config.loginAPI}`,
+          userData
+        );
+        localStorage.setItem('token', response.data.token);
+        if (response.status >= 200 && response.status < 300) {
+          console.log(`Request failed with status ${response.status}`);
 
+          return response.data;
+        } else {
+          // Handle error response
+          console.log(`Request failed with status ${response.status}`);
+          throw new Error(`Request failed with status ${response.status}`);
+        }
       }
-      const { data } = await axios.post(`${Config.apiURL + Config.loginAPI}`, userData);
-      localStorage.setItem('token', data.token);
-     
-      console.log(data)
-      return data;
     } catch (error) {
-      return error;
+      // Handle specific errors here
+      // console.log(`Request failed with status ${response.status}`);
+      console.log(error);
+
+      throw error; // Rethrow the error to propagate it further if needed
     }
   },
 );
