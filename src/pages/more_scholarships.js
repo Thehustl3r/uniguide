@@ -5,10 +5,10 @@ import FilterBlock from "../components/filtter_block";
 import PageStyeCSS from "./pages_style.module.css"
 import { useDispatch } from "react-redux";
 import { fetchSchool } from '../redux/schoolReducer/schoolSlice';
-import {GridViewForSchool} from "../components/grid_for_school_university";
+import {GridViewForScholarship} from "../components/grid_for_school_university";
 
 
-const MoreSchoolPage = () => {
+const MoreScholarshipPage = () => {
     const dispatch = useDispatch();
   
 
@@ -16,8 +16,8 @@ const MoreSchoolPage = () => {
     return (<div className={PageStyeCSS.schoolPage}>
         <Header />
         <FilterBlock />
-        <GridViewForSchool/>
+        <GridViewForScholarship/>
         <Footer />
     </div>)
 }
-export default MoreSchoolPage;
+export default MoreScholarshipPage;
