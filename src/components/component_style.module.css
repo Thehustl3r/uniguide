@@ -5,6 +5,18 @@
   --blue:  #2C3E50;
   /* ... define other colors similarly */
 }
+/* global syle */
+a{
+  display: flex;
+  gap: 20px;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--blue);
+}
+
+
 /* Style for school list*/
 .gridContainer{
   width: 100%;
@@ -85,6 +97,9 @@
   font-weight: bold;
   display: flex;
   gap: 20px;
+}
+.card_slidingView h2{
+  text-wrap: wrap;
 }
 
 
@@ -199,4 +214,60 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+/* More coutries view */
+.moreCountry{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 17.6%;
+  margin-bottom: 50px;
+}
+.moreCountry .card{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 250px;
+  /* border: 1px solid; */
+  margin-right: 10px;
+  padding: 0px 20px;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent); 
+  align-items: center;/* Gradient for the shadow */
+  justify-content: center;
+
+}
+.schoolGrid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 20px;
+}
+
+/* search box style */
+.search_box {
+  display: flex;
+  width: 190px;
+  height: 40px;
+  color: white;
+  justify-content: space-between;
+  background-color: var(--pink);
+  padding: 10px;
+}
+.search_box input{
+  background-color: var(--pink);
+  color: var(--white);
+  font-size: medium;
+  font-weight: 400;
+  padding: 20px;
+  margin-top: -10px;
+  height: 30px;
+  width: 130px;
+  border: none;
+  outline: none;
+}
+.icon{
+  height: auto;
 }

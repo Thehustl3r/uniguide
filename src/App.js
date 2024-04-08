@@ -24,7 +24,14 @@ function App() {
     const pageName = location.pathname;
     if (pageName === '/') {
       document.title = 'uniguide'
-    } else
+    }
+    else if(pageName === '/schools/moreSchools'){
+      document.title = 'school'
+    }
+    else if(pageName === '/scholarships/moreScholarships'){
+      document.title = 'scholarships'
+    } 
+    else
       document.title = `${pageName.slice(1)}`;
   }, [location.pathname]
   );

@@ -5,6 +5,7 @@ import SlidingViewCSS from "./sliding_view.module.css"
 import { TfiNewWindow } from "react-icons/tfi";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export function SlidingViewForSchool({ title = 'Top' }) {
     const universities = useSelector(state => state.school);
@@ -24,9 +25,11 @@ export function SlidingViewForSchool({ title = 'Top' }) {
     }
 
     return (<div  className={SlidingViewCSS.slidingView}>
+        <Link to={'/schools/moreSchools'}>
         <h2 className={AppText.bigText}>
             {title}
         </h2>
+        </Link>
         <div className={SlidingViewCSS.viewSection}>
             <span className={SlidingViewCSS.arrows}>
                 <SlArrowLeft onClick={scrollLeft} />
@@ -60,9 +63,12 @@ export function SlidingViewForScholarship({ title = 'Top' }) {
     }
 
     return (<div className={SlidingViewCSS.slidingView}>
+        <Link to={'/scholarships/moreScholarships'}>
         <h2 className={AppText.bigText}>
             {title}
         </h2>
+        </Link>
+        
         <div className={SlidingViewCSS.viewSection}>
             <span className={SlidingViewCSS.arrows}>
                 <SlArrowLeft onClick={scrollLeft}/>

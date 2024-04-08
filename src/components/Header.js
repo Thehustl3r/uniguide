@@ -5,6 +5,7 @@ import BoxCSS from '../appCSS/appBox_css.module.css'
 import { IoSearch } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import SearchBox from './search_box';
 // import { Link } from 'react-router-dom';
 // import { Link as ScrollLink } from 'react-router-dom';
 
@@ -26,11 +27,7 @@ const Header = () => {
           <div>Scholarships</div>
         </Link>
       </div>
-      <div className={HeaderCSS.search_box}>
-        <input placeholder='Search'></input>
-        <IoSearch className={HeaderCSS.icon} />
-
-      </div>
+      <SearchBox/>
       {!(loginStatus.islogedIn) ?
         <div className={BoxCSS.box}>
           <Link to={'/login'} className={HeaderCSS.login}>LOGIN</Link>
